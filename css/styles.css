@@ -1,0 +1,587 @@
+:root {
+    --balance-color: #a2d0c1;
+    --dark-color: #214151;
+    --light-color: #eff7e1;
+    --light2-color: #f8dc81;
+  }
+* {
+	margin: 0;
+	padding: 0;
+}
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+main {
+  flex: 1;
+  overflow: auto;
+}
+header{
+    height: 70px;
+    z-index: 99;
+}
+footer{
+  height: 30px;
+}
+
+.navbar-collapse{
+  transition: .3s;
+}
+.contentOverflow{
+  height: 100%;
+  width: 100%;
+  left:0;
+  top: 0;
+  position: absolute;
+}
+
+
+.title{
+  color: var(--light-color);
+}
+.divBack{
+  background-color: rgba(33, 33, 33, 0.3)
+}
+
+.main-page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+  body{
+    background-color: var(--light-color);
+    font-family: 'Ubuntu', sans-serif;
+  }
+  .form-control:focus{
+    border-color: var(--light2-color);
+    box-shadow: 0 0 0 0.1rem var(--light2-color);
+  }
+
+
+    .nav-item a::after {
+      content: "";
+      background-color: var(--light-color);
+      height: 1px;
+      width: 100%;
+      transform: scale(0);
+      transition: .3s;
+      display: block;
+    }
+    .nav-item a:hover::after {
+      transform: scale(1);
+    }
+    
+    .navbar-brand{
+      font-size: 28px;
+    }
+.logoGradient{
+    font-family: "Aclonica", sans-serif;
+    background-image: linear-gradient(45deg, var(--light-color) 0%, var(--light-color) 46%, var(--light2-color) 100%);
+    background-clip: initial;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .nav-item{
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 20px;
+    background-image: linear-gradient(45deg, var(--light-color) 0%, var(--light-color) 46%, var(--light-color) 100%);
+    background-clip: initial;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .divImage{
+    background-color: #ccc;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .navbar{
+    border-bottom: 2px solid var(--balance-color);;
+    background-color: var(--dark-color);
+  }
+
+  .form-reg{
+    background-color: var(--balance-color);
+    padding: 30px;
+    color: var(--dark-color);
+    font-weight: bold;
+    box-shadow: 0 0 5px var(--dark-color);
+    width: 400px;
+  }
+  .form-reg input[type='text']{
+    color: var(--dark-color);
+  }
+
+  .btn{
+    background-color: var(--dark-color);
+    color: var(--light2-color);
+    border: 1px solid var(--dark-color);
+    transition: 0;
+  }
+  .btn:hover{
+    background-color: transparent;
+    color: var(--dark-color);
+    transition: .2s;
+  }
+
+  .nav-item-active {
+    text-shadow: 1px 1px 12px var(--light-color);
+  }
+  .nav-item-active a::after{
+    transform: scale(.8);
+  }
+
+
+
+#adminCountries{
+  background-color: var(--light2-color);
+}
+#adminCities{
+  background-color: var(--light-color);
+}
+#adminHotels{
+  background-color: var(--light-color);
+}
+#adminImages{
+  background-color: var(--light2-color);
+}
+
+tbody{
+  height:20vh;
+  overflow:auto;
+  width: 100%;
+  }
+  thead,tbody,tr,td,th{
+    display:block;
+  }
+  tbody td{
+    float:left;
+  }
+    
+  thead tr th {
+    float:left;
+  }
+  td,th{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+.adminPanel form{
+  height: 100%;
+}
+.adminPanel{
+  box-shadow: 0 0 5px var(--dark-color);
+}
+
+.table{
+  color: var(--dark-color);
+}
+.table thead th{
+  border-bottom: 0;
+}
+
+.table td, .table th{
+  border-top: 0;
+}
+
+textarea{
+  border: 0;
+  outline: 0;
+  resize: none;
+  overflow: hidden;
+}
+
+.input__wrapper {
+  width: 100%;
+  position: relative;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+ 
+.input__file {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+}
+ 
+ 
+.input__file-button-text {
+  line-height: 1;
+  margin-top: 1px;
+}
+ 
+.input__file-button {
+  width: 100%;
+  height: 60px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--light-color);
+  color: var(--dark-color);
+}
+
+.imagesHotel {
+  height:calc(20vh + 70px);
+  display: flex;
+  flex-wrap: wrap;
+  overflow: auto;
+  padding: 0 10px;
+}
+
+input[type="checkbox"][class^="checkboxImage"] {
+  display: none;
+}
+
+input[type="checkbox"]{
+  width: 18px;
+  height: 18px;
+}
+
+label {
+  display: block;
+  position: relative;
+  cursor: pointer;
+}
+
+label::before {
+  background-color: transparent;
+  color: var(--light-color);
+  content: " ";
+  display: block;
+  border-radius: 10%;
+  border: 1px solid var(--light-color);
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  transition-duration: 0.4s;
+  transform: scale(0);
+  font-size: 20px;
+}
+
+label .divImage {
+  height: 100px;
+  transition-duration: 0.2s;
+  transform-origin: 50% 50%;
+}
+
+:checked+label {
+  border-color: #ddd;
+}
+
+:checked+label::before {
+  content: "✓";
+  transform: scale(1);
+  z-index: 99;
+}
+
+:checked+label .divImage {
+  transform: scale(0.9);
+  box-shadow: 0 0 5px #333;
+  z-index: -1;
+}
+:checked+label .divBackground {
+  background-color: rgba(33, 33, 33, 0.5);
+}
+
+.divBackground{
+  background-color: rgba(33, 33, 33, 0.0);
+  width: 100%;
+  height: 100%;
+}
+
+.imageBlock{
+  visibility: hidden;
+  opacity: 0;
+  transition: .4s;
+}
+select option{
+  font-size: 18px;
+}
+select{
+  overflow: auto;
+}
+.hotelsDiv{
+  display: flex;
+  flex-wrap: wrap;
+  overflow: auto;
+  margin: auto 0;
+  align-items: center;
+  left: 0;
+  transition: .4s;
+}
+.hotelDiv{
+  border: 1px solid var(--dark-color);
+  height: 300px;
+  word-break: break-all;
+  color: var(--light2-color);
+  box-shadow: 0px 0px 100px 10px var(--dark-color) inset;
+}
+.hotelBackground{
+  background-color: rgba(33, 33, 33, 0.4);
+  width: 100%;
+  height: 100%;
+  padding: 5%;
+}
+.hotelDiv:hover .hoverHotel{
+  visibility: visible;
+  opacity: 1;
+}
+.hotelDiv:hover .staticHotel{
+  visibility: hidden;
+
+  opacity: 0;
+}
+
+#HotelsList{
+  flex: 1;
+  overflow: auto;
+}
+
+.hoverHotel{
+  background-color: rgba(33, 33, 33, 0.7);
+  opacity: 0;
+  transition: .4s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+}
+.staticHotel{
+  opacity: 1;
+  transition: .4s;
+  visibility: visible;
+}
+
+.hotelLink{
+  border: 2px solid var(--light2-color);
+  background-color: transparent;
+  padding: 10px 20px;
+  color: var(--light2-color);
+  opacity: .9;
+  cursor: pointer;
+}
+.hotelLink:hover{
+  color: var(--light2-color);
+  text-decoration: none;
+  box-shadow: 0px 0px 5px var(--light2-color);
+}
+
+.hotelInfo{
+  height: calc(100% - 130px);
+}
+
+.hotelName{
+  font-size: 60px;
+  text-shadow: 3px 3px 10px var(--dark-color);
+    font-weight: bold;
+}
+
+.hotelInfoContent{
+  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  height: 100%;
+  padding: 5%;
+
+}
+
+.childHotelInfoContent{
+  background-color: rgba(0,0,0, 0.5); /* Black w/opacity/see-through */
+  color: var(--light-color);
+  font-weight: bold;
+  border: 3px solid var(--light-color);
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.hotelInfoContent b{
+  color: var(--light2-color);
+}
+
+.descHotel{
+  border-bottom: 2px solid var(--light-color);
+}
+
+.hotelImgs{
+  width: 50%;
+  height: 100%;
+  overflow: auto;
+}
+
+.hotelInf{
+  width: 50%;
+  font-size: 20px;
+  overflow: auto;
+}
+.modal-dialog{
+  height: 70%;
+}
+.modal-content{
+  height: 100%;
+}
+
+.signLink{
+  font-size: 17px;
+   color: var(--light-color);
+  font-weight: bold;
+
+}
+.signLink:hover{
+  text-decoration: none;
+  color: var(--light2-color);
+}
+
+.logoutBtn{
+  border-radius: 0px 5px 5px 0px;
+  border: 1px solid var(--light-color);
+  font-size: 16px;
+  padding: 2px;
+  background-color: var(--light2-color);
+  transition: .2s;
+  border-left: 0;
+  color: var(--dark-color);
+}
+
+.logoutBtn:focus{
+  outline: 0;
+}
+.logoutBtn:hover{
+  color: var(--light2-color);
+  background-color:transparent;
+}
+
+.loginName{
+  border: 1px solid var(--light-color);
+  border-radius: 5px 0 0 5px;
+}
+
+.loginName:hover{
+  background-color: var(--light2-color);
+  color: var(--dark-color);
+}
+
+.hotelInfoTitle{
+  height: 130px;
+}
+
+.form-admins{
+  max-width: 400px;
+  margin: 3% auto 0 auto;
+}
+
+.form-admins .btn:hover{
+  color: var(--light2-color)
+}
+
+.privatePage .card, .list-group-item{
+  background-color: transparent;
+  border: 2px solid var(--light2-color);
+}
+
+.absoluteFull{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+
+
+
+
+@media(max-width: 990px){
+.hotelInfo{
+  height: auto;
+}
+.hotelInfoTitle{
+  height: auto;
+}
+.childHotelInfoContent{
+  overflow: auto;
+}
+.hotelInfoContent{
+  padding: 0;
+}
+}
+
+#HotelsList::-webkit-scrollbar { 
+  display: none; 
+}
+.childHotelInfoContent::-webkit-scrollbar { 
+  display: none; 
+}
+.hotelInf::-webkit-scrollbar { 
+  display: none; 
+}
+.hotelImgs::-webkit-scrollbar { 
+  display: none; 
+}
+.hotelsDiv tbody::-webkit-scrollbar { 
+  display: none; 
+}
+#adminCities tbody::-webkit-scrollbar { 
+  display: none; 
+}
+#adminHotels tbody::-webkit-scrollbar { 
+  display: none; 
+}
+#adminCountries tbody::-webkit-scrollbar { 
+  display: none; 
+}
+.imagesHotel::-webkit-scrollbar { 
+  display: none; 
+}
+  :focus::-webkit-input-placeholder {
+    color: transparent
+  }
+  
+  :focus::-moz-placeholder {
+    color: transparent
+  }
+  
+  :focus:-ms-input-placeholder {
+    color: transparent
+  }
+  ::-webkit-input-placeholder {
+    text-align:center;
+    }
+    
+    :-moz-placeholder { /* Firefox 18- */
+       text-align:center;  
+    }
+    
+    ::-moz-placeholder {  /* Firefox 19+ */
+       text-align:center;  
+    }
+    
+    :-ms-input-placeholder {  
+       text-align:center; 
+    }
+
+    textarea::-webkit-input-placeholder {
+      color: var(--dark-color);
+  }
+   
+  textarea:-moz-placeholder {
+      color: var(--dark-color);
+  }
